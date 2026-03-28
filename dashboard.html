@@ -147,6 +147,38 @@
       color: var(--accent);
     }
 
+    .agent-icon.meta-ads {
+      background: linear-gradient(135deg, var(--orange-dim), var(--green-dim));
+      border: 1px solid var(--orange);
+      color: var(--orange);
+    }
+
+    .sub-agents {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .sub-agent-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 0.85rem;
+    }
+
+    .sub-agent-name {
+      font-family: var(--font);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .sub-agent-role {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
     .agent-name {
       font-size: 1.125rem;
       font-weight: 600;
@@ -323,6 +355,82 @@
     .file-map .indent { padding-left: 1.5rem; }
     .file-map .indent-2 { padding-left: 3rem; }
 
+    /* Scheduled Tasks */
+    .schedule-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .schedule-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      background: var(--orange-dim);
+      border: 1px solid var(--orange);
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    .schedule-details {
+      flex: 1;
+    }
+
+    .schedule-name {
+      font-family: var(--font);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .schedule-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .schedule-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .schedule-meta .tag {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      font-family: var(--font);
+    }
+
+    .schedule-meta .tag.cron {
+      background: var(--orange-dim);
+      color: var(--orange);
+    }
+
+    .schedule-meta .tag.repo {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .schedule-meta .tag.model {
+      background: var(--purple-dim);
+      color: var(--purple);
+    }
+
+    .schedule-meta .tag.enabled {
+      background: var(--green-dim);
+      color: var(--green);
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding-top: 1rem;
@@ -351,11 +459,11 @@
   <div class="stats">
     <div class="stat-card">
       <div class="label">Agents</div>
-      <div class="value accent">1</div>
+      <div class="value accent">2</div>
     </div>
     <div class="stat-card">
       <div class="label">Task Modes</div>
-      <div class="value green">6</div>
+      <div class="value green">16</div>
     </div>
     <div class="stat-card">
       <div class="label">Skills</div>
@@ -363,7 +471,11 @@
     </div>
     <div class="stat-card">
       <div class="label">Knowledge Files</div>
-      <div class="value purple">2</div>
+      <div class="value purple">7</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Scheduled</div>
+      <div class="value orange">2</div>
     </div>
     <div class="stat-card">
       <div class="label">Projects</div>
@@ -373,7 +485,7 @@
 
   <!-- Agents -->
   <section>
-    <h2>Agents <span class="badge">1 active</span></h2>
+    <h2>Agents <span class="badge">2 active</span></h2>
 
     <div class="agent-card">
       <div class="agent-header">
@@ -446,19 +558,161 @@
     </div>
   </section>
 
+    <div class="agent-card">
+      <div class="agent-header">
+        <div class="agent-icon meta-ads">M</div>
+        <div>
+          <div class="agent-name">meta-ads</div>
+          <div class="agent-role">Meta ads creative strategist (Facebook + Instagram)</div>
+        </div>
+        <div class="agent-status">ACTIVE</div>
+      </div>
+
+      <div class="agent-meta">
+        <span class="meta-tag">E-commerce</span>
+        <span class="meta-tag">Service-based</span>
+        <span class="meta-tag">Facebook Ads</span>
+        <span class="meta-tag">Instagram Ads</span>
+        <span class="meta-tag">Creative Strategy</span>
+        <span class="meta-tag">Direct Response</span>
+      </div>
+
+      <div class="skills-section">
+        <h3>Sub-Agents</h3>
+        <div class="sub-agents">
+          <div class="sub-agent-card">
+            <div class="sub-agent-name">creative</div>
+            <div class="sub-agent-role">Copywriting, briefs, ideation, iteration</div>
+          </div>
+          <div class="sub-agent-card">
+            <div class="sub-agent-name">intel</div>
+            <div class="sub-agent-role">Research, swipe analysis, trends, auditing</div>
+          </div>
+          <div class="sub-agent-card">
+            <div class="sub-agent-name">analytics</div>
+            <div class="sub-agent-role">Test planning, metrics, reporting (future)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Task Modes</h3>
+        <div class="skills-grid">
+          <div class="skill-item mode">
+            <div class="skill-name">/meta-ads</div>
+            <div class="skill-desc">Full agent activation &mdash; loads knowledge + client context</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/creative-brief</div>
+            <div class="skill-desc">Generate structured creative briefs with hook, visual, CTA, targeting</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/copy</div>
+            <div class="skill-desc">Write ad copy &mdash; primary text, headlines, descriptions per placement</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/angles</div>
+            <div class="skill-desc">Generate hooks, copy angles, creative concepts with rationale</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/iterate</div>
+            <div class="skill-desc">Take performance data, diagnose issues, output creative variations</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/ad-audit</div>
+            <div class="skill-desc">Score creatives on hook, copy, compliance, audience fit</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/swipe</div>
+            <div class="skill-desc">Analyze competitor ads, annotate why they work, save to swipe file</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/trends</div>
+            <div class="skill-desc">What's performing now &mdash; formats, styles, hooks, algorithm changes</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/test-plan</div>
+            <div class="skill-desc">Design creative tests with hypotheses, metrics, kill criteria</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/ad-learn</div>
+            <div class="skill-desc">Auto-scan marketing sources, update knowledge base</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Scheduled Tasks -->
+  <section>
+    <h2>Scheduled Tasks <span class="badge">2 active</span></h2>
+    <div class="schedule-card" style="margin-bottom: 0.75rem;">
+      <div class="schedule-icon">S</div>
+      <div class="schedule-details">
+        <div class="schedule-name">webdev-weekly-learn</div>
+        <div class="schedule-desc">Auto-scans web.dev, Chrome blog, MDN, CSS-Tricks, and Changelog daily. Updates knowledge/trends.md with new findings and commits changes.</div>
+        <div class="schedule-meta">
+          <span class="tag cron">daily 2:00am PHT</span>
+          <span class="tag repo">devclcbrr/cal-agents</span>
+          <span class="tag model">sonnet 4.6</span>
+          <span class="tag enabled">ENABLED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="schedule-card">
+      <div class="schedule-icon">S</div>
+      <div class="schedule-details">
+        <div class="schedule-name">meta-ads-daily-learn</div>
+        <div class="schedule-desc">Auto-scans marketing sources for Meta ads trends, creative patterns, and algorithm updates. Updates meta-ads/knowledge/trends.md.</div>
+        <div class="schedule-meta">
+          <span class="tag cron">daily 2:00am PHT</span>
+          <span class="tag repo">devclcbrr/cal-agents</span>
+          <span class="tag model">sonnet 4.6</span>
+          <span class="tag enabled">ENABLED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Knowledge Base -->
   <section>
-    <h2>Knowledge Base <span class="badge">2 files</span></h2>
+    <h2>Knowledge Base <span class="badge">7 files</span></h2>
     <div class="knowledge-list">
       <div class="knowledge-item">
-        <h4>Fundamentals</h4>
-        <p>Core web dev principles: HTML semantics, CSS architecture (ITCSS, BEM, tokens), modern JS (ES2020+), React + HubL patterns, Core Web Vitals, SEO, testing checklist.</p>
+        <h4>Web Dev Fundamentals</h4>
+        <p>HTML semantics, CSS architecture (ITCSS, BEM, tokens), modern JS (ES2020+), React + HubL patterns, Core Web Vitals, SEO, testing checklist.</p>
         <span class="file-path">agents/knowledge/fundamentals.md</span>
       </div>
       <div class="knowledge-item">
-        <h4>Trends</h4>
+        <h4>Web Dev Trends</h4>
         <p>Living document updated by /learn. 8 entries: CSS nesting, container queries, :has(), View Transitions, Popover API, oklch(), Subgrid, Anchor positioning.</p>
         <span class="file-path">agents/knowledge/trends.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Ads Fundamentals</h4>
+        <p>Direct response principles, hook taxonomy (10 types), copy frameworks (AIDA, PAS, BAB), funnel strategy, video ad structure, Meta specs, policies, offer framing, fatigue management.</p>
+        <span class="file-path">agents/meta-ads/knowledge/fundamentals.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Ads Trends</h4>
+        <p>Living document updated by /ad-learn and daily trigger. Current Meta ad creative trends, formats, and algorithm changes.</p>
+        <span class="file-path">agents/meta-ads/knowledge/trends.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Swipe File</h4>
+        <p>Annotated competitor ads built by /swipe. Tagged by niche, funnel stage, hook type, and format.</p>
+        <span class="file-path">agents/meta-ads/knowledge/swipe-file.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Client Profiles</h4>
+        <p>Brand profiles with voice, audience, offers, competitors, and past performance. Auto-loaded by all meta-ads skills.</p>
+        <span class="file-path">agents/meta-ads/knowledge/clients.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Benchmarks</h4>
+        <p>Industry benchmarks by niche: e-commerce, fashion, beauty, services, video metrics, seasonal CPM multipliers.</p>
+        <span class="file-path">agents/meta-ads/knowledge/benchmarks.md</span>
       </div>
     </div>
   </section>
@@ -493,28 +747,38 @@
     <h2>File Map</h2>
     <div class="file-map">
       <div><span class="dir">~/cal-claude-code/agents/</span></div>
-      <div class="indent"><span class="file">webdev.md</span> <span class="comment">// agent brain</span></div>
-      <div class="indent"><span class="file">memory.md</span> <span class="comment">// session memory</span></div>
+      <div class="indent"><span class="file">webdev.md</span> <span class="comment">// webdev agent brain</span></div>
+      <div class="indent"><span class="file">memory.md</span> <span class="comment">// webdev session memory</span></div>
       <div class="indent"><span class="file">dashboard.html</span> <span class="comment">// this file</span></div>
       <div class="indent"><span class="dir">knowledge/</span></div>
       <div class="indent-2"><span class="file">fundamentals.md</span> <span class="comment">// timeless web dev</span></div>
       <div class="indent-2"><span class="file">trends.md</span> <span class="comment">// updated by /learn</span></div>
+      <div class="indent"><span class="dir">meta-ads/</span></div>
+      <div class="indent-2"><span class="file">meta-ads.md</span> <span class="comment">// orchestrator brain</span></div>
+      <div class="indent-2"><span class="file">creative.md</span> <span class="comment">// creative sub-agent</span></div>
+      <div class="indent-2"><span class="file">intel.md</span> <span class="comment">// intel sub-agent</span></div>
+      <div class="indent-2"><span class="file">analytics.md</span> <span class="comment">// analytics sub-agent</span></div>
+      <div class="indent-2"><span class="file">memory.md</span> <span class="comment">// system docs</span></div>
+      <div class="indent-2"><span class="dir">knowledge/</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">fundamentals.md</span> <span class="comment">// hooks, copy, specs</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">trends.md</span> <span class="comment">// updated by /ad-learn</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">swipe-file.md</span> <span class="comment">// built by /swipe</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">clients.md</span> <span class="comment">// brand profiles</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">benchmarks.md</span> <span class="comment">// industry data</span></div>
       <div><span class="dir">~/.claude/commands/</span></div>
-      <div class="indent"><span class="file">webdev.md</span> <span class="comment">// entry point</span></div>
-      <div class="indent"><span class="file">build.md</span> <span class="comment">// scaffold mode</span></div>
-      <div class="indent"><span class="file">refactor.md</span> <span class="comment">// clean mode</span></div>
-      <div class="indent"><span class="file">audit.md</span> <span class="comment">// scan mode</span></div>
-      <div class="indent"><span class="file">review.md</span> <span class="comment">// quality check</span></div>
-      <div class="indent"><span class="file">tokens.md</span> <span class="comment">// design system</span></div>
-      <div class="indent"><span class="file">learn.md</span> <span class="comment">// research system</span></div>
+      <div class="indent"><span class="file">webdev.md</span> <span class="comment">// webdev entry point</span></div>
+      <div class="indent"><span class="file">build.md, refactor.md, audit.md, review.md, tokens.md, learn.md</span></div>
       <div class="indent"><span class="file">frontend-design.md</span> <span class="comment">// UI design skill</span></div>
+      <div class="indent"><span class="file">meta-ads.md</span> <span class="comment">// meta-ads entry point</span></div>
+      <div class="indent"><span class="file">creative-brief.md, copy.md, angles.md, iterate.md</span></div>
+      <div class="indent"><span class="file">swipe.md, trends.md, ad-learn.md, ad-audit.md, test-plan.md</span></div>
       <div><span class="dir">~/.claude/skills/</span></div>
       <div class="indent"><span class="dir">last30days/</span> <span class="comment">// ClawHub skill</span></div>
     </div>
   </section>
 
   <footer>
-    <span>Last updated: 2026-03-28</span>
+    <span>Last updated: 2026-03-29</span>
     <span>Auto-maintained by Claude Code</span>
   </footer>
 
