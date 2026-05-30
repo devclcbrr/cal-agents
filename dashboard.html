@@ -579,11 +579,15 @@
       </div>
 
       <div class="skills-section">
-        <h3>Knowledge &amp; Research</h3>
+        <h3>Self-Improvement Loops</h3>
         <div class="skills-grid">
           <div class="skill-item">
-            <div class="skill-name">/learn</div>
-            <div class="skill-desc">Research topics/URLs &rarr; append to trends.md. Sources expanded: + Baseline, caniuse, WebKit, HubSpot/Cloudflare changelogs</div>
+            <div class="skill-name">/learn &mdash; Level 1</div>
+            <div class="skill-desc">Outside-in: research &rarr; append to trends.md. Sources expanded: + Baseline, caniuse, WebKit, HubSpot/Cloudflare changelogs. Weekly via launchd.</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/webdev-feedback &mdash; Level 2</div>
+            <div class="skill-desc">Inside-out: capture Mim's corrections &amp; recurring /review misses into lessons.md as durable rules. Read before every task.</div>
           </div>
           <div class="skill-item external">
             <div class="skill-name">/last30days</div>
@@ -785,13 +789,13 @@
     <div class="schedule-card" style="margin-bottom: 1rem;">
       <div class="schedule-icon">S</div>
       <div class="schedule-details">
-        <div class="schedule-name">webdev-weekly-learn</div>
-        <div class="schedule-desc">Auto-scans web.dev, Chrome blog, MDN, CSS-Tricks, and Changelog daily. Updates knowledge/trends.md with new findings and commits changes.</div>
+        <div class="schedule-name">com.mim.webdev-learn (Level 1)</div>
+        <div class="schedule-desc">LOCAL launchd job. Runs `claude -p` to /learn + CURATE trends.md weekly (scan sources, append, re-evaluate support flags, prune Outdated). Edits local knowledge files directly &mdash; no git round-trip.</div>
         <div class="schedule-meta">
-          <span class="tag cron">daily 2:00am PHT</span>
-          <span class="tag repo">devclcbrr/cal-agents</span>
-          <span class="tag model">sonnet 4.6</span>
-          <span class="tag enabled">ENABLED</span>
+          <span class="tag cron">Sun 03:20 local</span>
+          <span class="tag repo">launchd (local)</span>
+          <span class="tag model">~/.local/bin/claude</span>
+          <span class="tag enabled">LOADED</span>
         </div>
       </div>
     </div>
@@ -827,8 +831,13 @@
 
   <!-- Knowledge Base -->
   <section>
-    <h2>Knowledge Base <span class="badge">11 files</span></h2>
+    <h2>Knowledge Base <span class="badge">12 files</span></h2>
     <div class="knowledge-list">
+      <div class="knowledge-item">
+        <h4>Web Dev Lessons (feedback loop)</h4>
+        <p>Level-2 self-improvement. Durable corrections from real work &mdash; Mim's feedback + recurring /review misses. webdev reads this before every task. Appended via /webdev-feedback.</p>
+        <span class="file-path">agents/knowledge/lessons.md</span>
+      </div>
       <div class="knowledge-item">
         <h4>Web Dev Fundamentals</h4>
         <p>HTML semantics, CSS architecture (ITCSS, BEM, tokens), modern JS (ES2020+), React + HubL patterns, Core Web Vitals, SEO, testing checklist.</p>
