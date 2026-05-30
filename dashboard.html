@@ -33,15 +33,15 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 2.5rem 3rem;
+      max-width: 100%;
+      margin: 0;
     }
 
     header {
       border-bottom: 1px solid var(--border);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     header h1 {
@@ -61,15 +61,15 @@
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
     }
 
     .stat-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1rem 1.25rem;
+      padding: 1.25rem 1.5rem;
     }
 
     .stat-card .label {
@@ -92,13 +92,13 @@
     .stat-card .value.purple { color: var(--purple); }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     section h2 {
       font-size: 1.125rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -118,15 +118,15 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .agent-header {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .agent-icon {
@@ -153,18 +153,24 @@
       color: var(--orange);
     }
 
+    .agent-icon.design {
+      background: linear-gradient(135deg, #2d1f4e, #1f3a5f);
+      border: 1px solid var(--pink);
+      color: var(--pink);
+    }
+
     .sub-agents {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
     }
 
     .sub-agent-card {
       background: var(--surface-2);
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 0.6rem 0.85rem;
+      padding: 0.85rem 1.1rem;
     }
 
     .sub-agent-name {
@@ -205,7 +211,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.75rem;
     }
 
     .meta-tag {
@@ -224,20 +230,24 @@
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills-section + .skills-section {
+      margin-top: 1.75rem;
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
 
     .skill-item {
       background: var(--surface-2);
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 0.75rem 1rem;
+      padding: 0.85rem 1.1rem;
       transition: border-color 0.15s;
     }
 
@@ -266,14 +276,14 @@
     .knowledge-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .knowledge-item {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1rem 1.25rem;
+      padding: 1.25rem 1.5rem;
     }
 
     .knowledge-item h4 {
@@ -299,14 +309,14 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1rem 1.25rem;
+      padding: 1.25rem 1.5rem;
     }
 
     .project-card h4 {
@@ -343,10 +353,10 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.25rem;
+      padding: 1.75rem;
       font-family: var(--font);
       font-size: 0.8rem;
-      line-height: 1.8;
+      line-height: 2;
     }
 
     .file-map .dir { color: var(--accent); }
@@ -360,10 +370,10 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.25rem;
+      padding: 1.5rem;
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .schedule-icon {
@@ -433,8 +443,8 @@
 
     footer {
       border-top: 1px solid var(--border);
-      padding-top: 1rem;
-      margin-top: 2rem;
+      padding-top: 1.5rem;
+      margin-top: 3rem;
       font-size: 0.75rem;
       color: var(--text-muted);
       display: flex;
@@ -459,11 +469,11 @@
   <div class="stats">
     <div class="stat-card">
       <div class="label">Agents</div>
-      <div class="value accent">2</div>
+      <div class="value accent">4</div>
     </div>
     <div class="stat-card">
       <div class="label">Task Modes</div>
-      <div class="value green">16</div>
+      <div class="value green">28</div>
     </div>
     <div class="stat-card">
       <div class="label">Skills</div>
@@ -471,28 +481,28 @@
     </div>
     <div class="stat-card">
       <div class="label">Knowledge Files</div>
-      <div class="value purple">7</div>
+      <div class="value purple">11</div>
     </div>
     <div class="stat-card">
       <div class="label">Scheduled</div>
-      <div class="value orange">2</div>
+      <div class="value orange">3</div>
     </div>
     <div class="stat-card">
       <div class="label">Projects</div>
-      <div class="value accent">2</div>
+      <div class="value accent">3</div>
     </div>
   </div>
 
   <!-- Agents -->
   <section>
-    <h2>Agents <span class="badge">2 active</span></h2>
+    <h2>Agents <span class="badge">4 active</span></h2>
 
     <div class="agent-card">
       <div class="agent-header">
         <div class="agent-icon webdev">W</div>
         <div>
           <div class="agent-name">webdev</div>
-          <div class="agent-role">Full-stack web development assistant</div>
+          <div class="agent-role">Senior web developer &mdash; routes tasks to authoritative skills, keeps only Mim-specific opinions inline</div>
         </div>
         <div class="agent-status">ACTIVE</div>
       </div>
@@ -529,7 +539,7 @@
           </div>
           <div class="skill-item mode">
             <div class="skill-name">/review</div>
-            <div class="skill-desc">Check accessibility, performance, security, SEO, CSS quality</div>
+            <div class="skill-desc">Correctness, readability, accessibility, performance, security, SEO, CSS quality</div>
           </div>
           <div class="skill-item mode">
             <div class="skill-name">/tokens</div>
@@ -538,16 +548,42 @@
         </div>
       </div>
 
-      <div class="skills-section" style="margin-top: 1rem;">
-        <h3>Skills</h3>
+      <div class="skills-section">
+        <h3>Routes to &mdash; Authoritative Skills</h3>
         <div class="skills-grid">
           <div class="skill-item design">
-            <div class="skill-name">/frontend-design</div>
-            <div class="skill-desc">Create distinctive, production-grade UI components and pages</div>
+            <div class="skill-name">frontend-design</div>
+            <div class="skill-desc">Build UI / components / pages (refine: polish, typeset, arrange)</div>
           </div>
           <div class="skill-item">
+            <div class="skill-name">workers-best-practices</div>
+            <div class="skill-desc">Cloudflare Workers + wrangler + cloudflare skills</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">web-perf</div>
+            <div class="skill-desc">Lighthouse, Core Web Vitals, load performance</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">audit / harden / normalize</div>
+            <div class="skill-desc">A11y scoring, production-hardening, design-drift realign</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">systematic-debugging</div>
+            <div class="skill-desc">Any bug / test failure, before proposing a fix</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">verification-before-completion</div>
+            <div class="skill-desc">Run the check before claiming done / committing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-section">
+        <h3>Knowledge &amp; Research</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
             <div class="skill-name">/learn</div>
-            <div class="skill-desc">Research topics or URLs and save to knowledge base</div>
+            <div class="skill-desc">Research topics/URLs &rarr; append to trends.md. Sources expanded: + Baseline, caniuse, WebKit, HubSpot/Cloudflare changelogs</div>
           </div>
           <div class="skill-item external">
             <div class="skill-name">/last30days</div>
@@ -556,7 +592,6 @@
         </div>
       </div>
     </div>
-  </section>
 
     <div class="agent-card">
       <div class="agent-header">
@@ -638,14 +673,116 @@
             <div class="skill-name">/ad-learn</div>
             <div class="skill-desc">Auto-scan marketing sources, update knowledge base</div>
           </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/report</div>
+            <div class="skill-desc">Pull live Meta API data, update Pulse dashboard</div>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="agent-card">
+      <div class="agent-header">
+        <div class="agent-icon design">D</div>
+        <div>
+          <div class="agent-name">design</div>
+          <div class="agent-role">UI/UX design researcher and builder</div>
+        </div>
+        <div class="agent-status">ACTIVE</div>
+      </div>
+
+      <div class="agent-meta">
+        <span class="meta-tag">Behance</span>
+        <span class="meta-tag">Dribbble</span>
+        <span class="meta-tag">Pinterest</span>
+        <span class="meta-tag">Awwwards</span>
+        <span class="meta-tag">Tailwind UI</span>
+        <span class="meta-tag">Shadcn</span>
+        <span class="meta-tag">CodePen</span>
+      </div>
+
+      <div class="skills-section">
+        <h3>Task Modes</h3>
+        <div class="skills-grid">
+          <div class="skill-item design">
+            <div class="skill-name">/design</div>
+            <div class="skill-desc">Full workflow &mdash; research, brief, build, self-review</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">/inspire</div>
+            <div class="skill-desc">Search design platforms, extract patterns, save to knowledge base</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">/moodboard</div>
+            <div class="skill-desc">Compile knowledge into structured design brief with exact specs</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">/design-review</div>
+            <div class="skill-desc">Critique HTML/CSS against tokens, preferences, and patterns</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">/design-learn</div>
+            <div class="skill-desc">Bulk research trending designs, update knowledge base</div>
+          </div>
+          <div class="skill-item design">
+            <div class="skill-name">/design-feedback</div>
+            <div class="skill-desc">Capture likes/rejects, update preferences and tokens</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="agent-card">
+      <div class="agent-header">
+        <div class="agent-icon" style="background:linear-gradient(135deg,#1a3a2a,#3d2e00);border:1px solid var(--green);color:var(--green);">S</div>
+        <div>
+          <div class="agent-name">security</div>
+          <div class="agent-role">Security auditor for deployed Cloudflare Workers projects</div>
+        </div>
+        <div class="agent-status">ACTIVE</div>
+      </div>
+
+      <div class="agent-meta">
+        <span class="meta-tag">Cloudflare Workers</span>
+        <span class="meta-tag">OWASP</span>
+        <span class="meta-tag">CORS</span>
+        <span class="meta-tag">API Auth</span>
+        <span class="meta-tag">Secret Detection</span>
+      </div>
+
+      <div class="skills-section">
+        <h3>Task Modes</h3>
+        <div class="skills-grid">
+          <div class="skill-item mode">
+            <div class="skill-name">/security-audit</div>
+            <div class="skill-desc">Full vulnerability scan with checklist + live endpoint testing</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/security-fix</div>
+            <div class="skill-desc">Apply fixes from audit findings, one at a time</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/security-report</div>
+            <div class="skill-desc">Quick status report with live tests</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/security-scan</div>
+            <div class="skill-desc">Scan files and git history for exposed secrets</div>
+          </div>
+          <div class="skill-item mode">
+            <div class="skill-name">/security-hooks</div>
+            <div class="skill-desc">Install pre-commit hooks that block secret commits</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Scheduled Tasks -->
   <section>
-    <h2>Scheduled Tasks <span class="badge">2 active</span></h2>
-    <div class="schedule-card" style="margin-bottom: 0.75rem;">
+    <h2>Scheduled Tasks <span class="badge">3 active</span></h2>
+
+    <div class="schedule-card" style="margin-bottom: 1rem;">
       <div class="schedule-icon">S</div>
       <div class="schedule-details">
         <div class="schedule-name">webdev-weekly-learn</div>
@@ -658,15 +795,28 @@
         </div>
       </div>
     </div>
-  </section>
 
-    <div class="schedule-card">
+    <div class="schedule-card" style="margin-bottom: 1rem;">
       <div class="schedule-icon">S</div>
       <div class="schedule-details">
         <div class="schedule-name">meta-ads-daily-learn</div>
         <div class="schedule-desc">Auto-scans marketing sources for Meta ads trends, creative patterns, and algorithm updates. Updates meta-ads/knowledge/trends.md.</div>
         <div class="schedule-meta">
-          <span class="tag cron">daily 2:00am PHT</span>
+          <span class="tag cron">daily 2:07am PHT</span>
+          <span class="tag repo">devclcbrr/cal-agents</span>
+          <span class="tag model">sonnet 4.6</span>
+          <span class="tag enabled">ENABLED</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-icon">S</div>
+      <div class="schedule-details">
+        <div class="schedule-name">design-daily-learn</div>
+        <div class="schedule-desc">Rotates through design categories (dashboards, landing pages, components, fintech UI). Searches Behance, Dribbble, Pinterest, Awwwards. Updates design/knowledge/.</div>
+        <div class="schedule-meta">
+          <span class="tag cron">daily 2:14am PHT</span>
           <span class="tag repo">devclcbrr/cal-agents</span>
           <span class="tag model">sonnet 4.6</span>
           <span class="tag enabled">ENABLED</span>
@@ -677,7 +827,7 @@
 
   <!-- Knowledge Base -->
   <section>
-    <h2>Knowledge Base <span class="badge">7 files</span></h2>
+    <h2>Knowledge Base <span class="badge">11 files</span></h2>
     <div class="knowledge-list">
       <div class="knowledge-item">
         <h4>Web Dev Fundamentals</h4>
@@ -686,7 +836,7 @@
       </div>
       <div class="knowledge-item">
         <h4>Web Dev Trends</h4>
-        <p>Living document updated by /learn. 8 entries: CSS nesting, container queries, :has(), View Transitions, Popover API, oklch(), Subgrid, Anchor positioning.</p>
+        <p>Living document updated by /learn. 25 entries. Refreshed May 2026: Anchor Positioning, @starting-style &amp; scroll-driven animations crossed into Baseline; added shape(), relative color, Tailwind v4, Temporal, resource management.</p>
         <span class="file-path">agents/knowledge/trends.md</span>
       </div>
       <div class="knowledge-item">
@@ -714,16 +864,46 @@
         <p>Industry benchmarks by niche: e-commerce, fashion, beauty, services, video metrics, seasonal CPM multipliers.</p>
         <span class="file-path">agents/meta-ads/knowledge/benchmarks.md</span>
       </div>
+      <div class="knowledge-item">
+        <h4>Design Preferences</h4>
+        <p>Mim's taste profile: likes (dark themes, blue accents, premium feel), rejects (generic templates, basic SVG), anti-patterns, style direction.</p>
+        <span class="file-path">agents/design/knowledge/preferences.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Design Tokens</h4>
+        <p>Living design system: colors, typography, spacing, borders, shadows, transitions, component defaults. Seed status, refined via feedback.</p>
+        <span class="file-path">agents/design/knowledge/tokens.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Dashboard Patterns</h4>
+        <p>Patterns for analytics dashboards, reports, and data visualization. Updated by /inspire and /design-learn.</p>
+        <span class="file-path">agents/design/knowledge/dashboards.md</span>
+      </div>
+      <div class="knowledge-item">
+        <h4>Security Checklist</h4>
+        <p>OWASP-adapted checklist for Cloudflare Workers: auth, CORS, input validation, headers, secrets management, secret detection regex patterns.</p>
+        <span class="file-path">agents/security/knowledge/checklist.md</span>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section>
-    <h2>Projects <span class="badge">2 active</span></h2>
+    <h2>Projects <span class="badge">3 active</span></h2>
     <div class="projects-grid">
       <div class="project-card">
+        <h4>Pulse (Meta Reports)</h4>
+        <div class="path">~/cal-claude-code/adscal/meta-reports/ &rarr; pulse.calcabrera.com</div>
+        <div class="modes">
+          <span>/report</span>
+          <span>/security-audit</span>
+          <span>/security-fix</span>
+          <span>/security-report</span>
+        </div>
+      </div>
+      <div class="project-card">
         <h4>DGEX HubSpot</h4>
-        <div class="path">~/cal-claude-code/dgex/hs-discoverer-audit/</div>
+        <div class="path">~/cal-claude-code/dgex/discoverer/html/</div>
         <div class="modes">
           <span>/audit</span>
           <span>/tokens</span>
@@ -753,6 +933,12 @@
       <div class="indent"><span class="dir">knowledge/</span></div>
       <div class="indent-2"><span class="file">fundamentals.md</span> <span class="comment">// timeless web dev</span></div>
       <div class="indent-2"><span class="file">trends.md</span> <span class="comment">// updated by /learn</span></div>
+      <div class="indent"><span class="dir">design/</span></div>
+      <div class="indent-2"><span class="file">design.md</span> <span class="comment">// design agent brain</span></div>
+      <div class="indent-2"><span class="dir">knowledge/</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">preferences.md</span> <span class="comment">// taste profile</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">tokens.md</span> <span class="comment">// design system</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">dashboards.md</span> <span class="comment">// dashboard patterns</span></div>
       <div class="indent"><span class="dir">meta-ads/</span></div>
       <div class="indent-2"><span class="file">meta-ads.md</span> <span class="comment">// orchestrator brain</span></div>
       <div class="indent-2"><span class="file">creative.md</span> <span class="comment">// creative sub-agent</span></div>
@@ -765,20 +951,33 @@
       <div class="indent-2"><span class="file" style="padding-left:1.5rem">swipe-file.md</span> <span class="comment">// built by /swipe</span></div>
       <div class="indent-2"><span class="file" style="padding-left:1.5rem">clients.md</span> <span class="comment">// brand profiles</span></div>
       <div class="indent-2"><span class="file" style="padding-left:1.5rem">benchmarks.md</span> <span class="comment">// industry data</span></div>
+      <div class="indent"><span class="dir">security/</span></div>
+      <div class="indent-2"><span class="file">security.md</span> <span class="comment">// security agent brain</span></div>
+      <div class="indent-2"><span class="dir">knowledge/</span></div>
+      <div class="indent-2"><span class="file" style="padding-left:1.5rem">checklist.md</span> <span class="comment">// OWASP + secret patterns</span></div>
+      <div><span class="dir">~/cal-claude-code/adscal/meta-reports/</span> <span class="comment">// Pulse project</span></div>
+      <div class="indent"><span class="file">src/index.js</span> <span class="comment">// Worker API (Meta + Sheets)</span></div>
+      <div class="indent"><span class="dir">public/</span> <span class="comment">// static assets</span></div>
+      <div class="indent-2"><span class="file">index.html</span> <span class="comment">// Pulse landing page</span></div>
+      <div class="indent-2"><span class="dir">reports/mod-factory/</span> <span class="comment">// live dashboard</span></div>
+      <div class="indent"><span class="file">wrangler.toml</span> <span class="comment">// Cloudflare config</span></div>
       <div><span class="dir">~/.claude/commands/</span></div>
       <div class="indent"><span class="file">webdev.md</span> <span class="comment">// webdev entry point</span></div>
       <div class="indent"><span class="file">build.md, refactor.md, audit.md, review.md, tokens.md, learn.md</span></div>
       <div class="indent"><span class="file">frontend-design.md</span> <span class="comment">// UI design skill</span></div>
       <div class="indent"><span class="file">meta-ads.md</span> <span class="comment">// meta-ads entry point</span></div>
       <div class="indent"><span class="file">creative-brief.md, copy.md, angles.md, iterate.md</span></div>
-      <div class="indent"><span class="file">swipe.md, trends.md, ad-learn.md, ad-audit.md, test-plan.md</span></div>
+      <div class="indent"><span class="file">swipe.md, trends.md, ad-learn.md, ad-audit.md, test-plan.md, report.md</span></div>
+      <div class="indent"><span class="file">design.md</span> <span class="comment">// design entry point</span></div>
+      <div class="indent"><span class="file">inspire.md, moodboard.md, design-review.md, design-learn.md, design-feedback.md</span></div>
+      <div class="indent"><span class="file">security-audit.md, security-fix.md, security-report.md, security-scan.md, security-hooks.md</span></div>
       <div><span class="dir">~/.claude/skills/</span></div>
       <div class="indent"><span class="dir">last30days/</span> <span class="comment">// ClawHub skill</span></div>
     </div>
   </section>
 
   <footer>
-    <span>Last updated: 2026-03-29</span>
+    <span>Last updated: 2026-05-31 (hook-triggered) &mdash; webdev &rarr; router refactor + trends refresh</span>
     <span>Auto-maintained by Claude Code</span>
   </footer>
 
